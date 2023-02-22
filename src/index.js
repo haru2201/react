@@ -1,6 +1,14 @@
-import ReactDOM from "react-dom";
-// import { Fragment } from "react";
+import React from "react";
+
+// import { render } from 'react-dom';
+import ReactDOM from "react-dom/client";
 import { App } from "./App";
+
+import { createRoot } from 'react-dom/client';
+
+// import { Fragment } from "react";
+import { AdminFlagProvider } from "./components/providers/AdminFlagProvider";
+
 
 // const App = () => {
 //   // return null;
@@ -17,4 +25,18 @@ import { App } from "./App";
 //   );
 // };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// const container = document.getElementById('root');
+// // console.log(container);
+// const root = createRoot(container);
+// console.log(root);
+// root.render(<App />);
+
+// ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(
+const root = createRoot(document.getElementById("root"));
+root.render(
+  // <AdminFlagProvider>
+    <App />
+  // </AdminFlagProvider>
+  // document.getElementById("root")
+);
