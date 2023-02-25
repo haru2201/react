@@ -16,6 +16,7 @@ export const AdminFlagProvider = props => {
   // Providerでchildrenを囲む
   // valueにグローバルに扱う値を設定  
   // <AdminFlagContext.Provider value={sampleObj}>
+  
   <AdminFlagContext.Provider value={{ isAdmin, setIsAdmin }}>
     {children}
   </AdminFlagContext.Provider>
